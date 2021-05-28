@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" style="margin-top: 30px;">
+    <h3 class="text-center">{{institute_value.name}} <hr></h3>
+
+
+    <div class="row">
+        <div class="col-sm">
+           <p class="text-center">Department: {{institute_value.dept}}</p> 
+        </div>
+        <div class="col-sm">
+            <p class="text-center">Session: {{institute_value.session}}</p> 
+        </div>
+    </div>
+    <div style="display:flex;justify-content:center; min-width:400px;min-height:300px;border:1px solid darkgrey;">
+        <div style="margin: 20px;">
+        {{value.event|safe}}
+    </div>
+    </div>
+
+
+</div>
+{% endblock %}
