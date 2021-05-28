@@ -69,4 +69,13 @@ def show_cycle_info(request, year, semester):
         'value': value,
         'institute_value':institute_value,
     }
-    return render(request,'show.html',context)
+    return render(request, 'show.html', context)
+    
+def all_event(request):
+    event = Versity_life_cycle.objects.filter(public=True)
+    institute = Institute_info.objects.filter(public=True)
+    context = {
+        'event': event,
+        'institute':institute,
+    }
+    return render(request,'all_event.html',context)

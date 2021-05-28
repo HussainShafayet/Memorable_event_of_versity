@@ -7,7 +7,7 @@ class Institute_info_Form(forms.ModelForm):
     class Meta:
         model = Institute_info
         fields = [
-            'name','dept','session'
+            'name','dept','session','public'
         ]
 
     def __init__(self, *args, **kwargs):
